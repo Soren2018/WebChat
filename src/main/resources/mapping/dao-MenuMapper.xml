@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fit.dao.MenuMapper">
+ 
+    <select id="queryObject" resultType="Menu">
+        SELECT *
+        FROM TB_MENU
+        <where>
+	        <if test="catId != null and catId != '' or catId == 0">
+	        	cat_id = #{catId}
+	        </if>
+	        <if test="catPid != null and catPid != '' or catPid == 0">
+	        	AND cat_pid = #{catPid}
+	        </if>
+        </where>
+    </select>
+ 
+</mapper>
