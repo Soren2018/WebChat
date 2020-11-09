@@ -2,7 +2,6 @@ package com.fit.dao;
 
 import org.apache.ibatis.annotations.Mapper;
 
-import com.fit.entity.Category;
 import com.fit.entity.User;
 
 /**
